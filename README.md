@@ -22,6 +22,7 @@ A deep learning project that automatically generates descriptive captions for im
 ## 📊 Results
 Example:  
 **Input:** 🖼️ (Cat on a sofa)  
+
 **Output:** “A cat is sitting on the sofa.”
 
 ## 👥 Team
