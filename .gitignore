@@ -1,0 +1,40 @@
+# Python cache & virtual env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+
+# Large model & data files
+*.h5
+*.keras
+*.pkl
+*.ckpt
+*.weights
+*.npz
+
+# Dataset directories
+dataset/
+Flickr8k_Dataset/
+Flickr8k_Text/
+images/
+features/
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Flask instance or uploads
+instance/
+uploads/

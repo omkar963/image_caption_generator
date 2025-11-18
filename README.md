@@ -19,13 +19,14 @@ LSTM decodes those features into text sequences
 Built using TensorFlow, Flask, and HTML/CSS/JS
 
 🧩 Tech Stack
-Component	Technology
-Frontend	HTML5, CSS3, JavaScript
-Backend	Flask (Python)
-Deep Learning	TensorFlow / Keras
+Component	      Technology
+Frontend	      HTML5, CSS3, JavaScript
+Backend  	      Flask (Python)
+Deep Learning	  TensorFlow / Keras
 Feature Extractor	VGG16 (pre-trained on ImageNet)
-Language Model	LSTM
-Dataset	Flickr8k
+Language Model	  LSTM
+Dataset	          Flickr8k
+
 🏗️ Project Structure
 image_caption_generator/
 │
@@ -41,19 +42,14 @@ image_caption_generator/
 ⚙️ How It Works
 
 Image Feature Extraction (CNN)
-
 Uploaded image is resized to 224×224 pixels.
-
 The VGG16 model (pre-trained on ImageNet) extracts high-level visual features (a 4096-dimensional vector).
 
 Sequence Generation (LSTM)
-
 The extracted features are fed into an LSTM model trained on the Flickr8k dataset.
-
 The model predicts one word at a time until it forms a complete sentence.
 
 Output Caption
-
 The predicted caption is cleaned and displayed on the frontend with a simulated confidence score.
 
 💻 How to Run Locally
@@ -84,15 +80,10 @@ Open it in your browser and upload any image.
 🧠 Model Training Overview
 
 Dataset: Flickr8k Dataset
-
 Architecture: VGG16 + LSTM
-
 Max Caption Length: 38
-
 Vocabulary Size: ~5000 words
-
 Epochs: 10
-
 Framework: TensorFlow / Keras
 
 The model was trained on a limited dataset (8k images) to keep training time reasonable, which limits caption accuracy.
@@ -122,6 +113,24 @@ Train the model on larger datasets for better vocabulary and context.
 Experiment with Transformer-based models (BLIP, ViT-GPT2, or InstructBLIP).
 
 Add multilingual caption generation support.
+
+## ⚙️ Model Setup
+
+This repository does not include large binary files (`.keras`, `.pkl`) due to GitHub’s file size limits.
+
+Before running the Flask app, make sure you:
+1. Run the training notebook (`model.ipynb`) to:
+   - Extract features from the Flickr8k dataset
+   - Train the caption generation model
+   - Save outputs as:
+     - `caption_model_evoastra_fixed.keras`
+     - `tokenizer.pkl`
+     - `features.pkl`
+2. Move both files to the project root (same folder as `app.py`).
+3. Start the Flask app:
+   ```bash
+   python app.py
+
 
 ❤️ Acknowledgments
 
